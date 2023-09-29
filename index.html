@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inclusive Island</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+
+<html lang="en" data-bs-theme="light"><head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.115.4">
+    <title>Carousel Template · Bootstrap v5.3</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        background-image: url(images/palm\ leaves.jpg);
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+    </style>
+
+<body>
+  <!--Header-->
+  <section id="header">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom" 
+    style=" background: linear-gradient(#EADBC8, #F2ECBE);
+    animation: gradient-animation 18s ease infinite;">>
+      <a href="http://127.0.0.1:3000/sih project/index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"></svg>
+        <span class="fs-4">Inclusive Island</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="http://127.0.0.1:3000/sih project/index.html" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="http://127.0.0.1:3000/sih project/signup.html" class="nav-link">Play Now!</a></li>
+        <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="#questions" class="nav-link">FAQs</a></li>  
+      </ul>
+    </header>
+
+  <!-- Title -->
+  <section id="title">
+    <div class="container col-xxl-8 px-4 py-5" style="background-image: url(./images/bgimg.gif); border-radius: 25px;; border: 2px solid #1D5D9B ">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="homepg">
+          <h1 class="display-4 fw-bold text-body-emphasis lh-1 mb-3"><b><b><i>INCLUSIVE ISLAND</i></b></b></h1>
+          <p style="font-size: 180%;"><b><i>Where everyone belongs!</i></b></p>
+          <div class="button">
+            <a href="http://127.0.0.1:3000/sih project/signup.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+            <a href="http://127.0.0.1:3000/sih project/log.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features -->
+<section id="features">
+  <hr class="featurette-divider">
+  <div class="container marketing">
+    <!-- START THE FEATURETTES -->
+    <section id="ADHD">
+    <div class="row featurette" style="background-image: url(https://png.pngtree.com/background/20221109/original/pngtree-green-and-gold-leaves-on-watercolor-background-picture-image_1954234.jpg); color: #0C356A; border-radius: 25px; border: 2px solid #3C6255;"> 
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1"><b><u>ADHD: </b></u><span class="featurette-heading fw-normal lh-1">Attention deficit hyperactivity disorder </span></h2>
+        <p class="lead"><b>Attention Deficit Hyperactivity Disorder (ADHD) is a diagnosis of a medical nature. People with ADHD have different patterns of brain activity and brain development, which influence their capacity for self-control and concentration. 
+          In an effort to encourage positive habits, we advise putting routines around homework, chores, and occasionally exercising</b></p>
+          <a href="http://127.0.0.1:3000/sih project/jungle_jump_inst.html" class="btn btn-success" role="button">Play Now</a>
+        </div>
+      <div class="col-md-5">
+              <img src="./images/junglejump.gif" alt="" width="450px" height="450px">
+    </div>
+  </section>
+
+    <hr class="featurette-divider">
+
+    <section id="Dyslexia">
+    <div class="row featurette" style="background-image: url(./images/mapimage.png); color: #2D2727; border-radius: 25px; border: 2px solid #65451F;">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1"><b><u>Dyslexia:</b></u> <span class="text-body-secondary">Reading difficulty disorder</span></h2>
+        <p class="lead"><b>Dyslexia is a learning disability that causes people to have difficulty understanding word sounds and learning how to recognize letters and words. 
+          Be motivating, interacting with your child, and support them in learning. Enhance their sense of self-worth by finding interesting ways to impart knowledge.</b></p>
+        <a href="http://127.0.0.1:3000/sih project/jumble_quest_inst.html" class="btn btn-success" role="button">Play Now</a>
+      </div>
+      <div class="col-md-5">
+        <img src="./images/jumblequest.gif" alt="image" width="450px" height="450px">
+      </div>
+    </div>
+  </section>
+
+    <hr class="featurette-divider">
+
+    <section id="Dyscalculia">
+    <div class="row featurette" style="background-image: url(./images/seaimg.png); color: #0C356A; border-radius: 25px; border: 2px solid #141E46;">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1"><b><u>Dyscalculia: </b></u> <span class="featurette-heading fw-normal lh-1">Numerical processing disorder</span></h2>
+        <p class="lead"><b>A learning challenge termed dyscalculia affects one's ability to understand math and number-based knowledge. Some of the areas that these kids struggle with are visual processing, short-term memory, language, and math. We suggest encouraging creativity in your child, engaging them in arithmetic games and enjoyable homework.</b></p>
+        <a href="http://127.0.0.1:3000/sih project/seashell_sum_inst.html" class="btn btn-success" role="button">Play Now</a>
+      </div>
+      <div class="col-md-5">
+        <img src="./images/seashell.png" alt="image" height="450px" width="450px">
+      </div>
+    </div>
+</section>
+    <hr class="featurette-divider">
+  </div>
+</section>
+  <!-- games -->
+  <section id="testimonial">
+
+  </section>
+  <!-- FAQs -->
+  <section id="questions">
+    <div class="FAQ">
+      <div class="heading" style="color: #263A29;">
+    <h1><b><u>FAQ's</u></b></h1>
+  </div>
+      <p><b>Ques1: How our website is valuable to your child?</b></p>
+      <p>Ans:  Our website include some exciting fun games that will provide an outlet for child to de - stress , allow them to be whoever they want to be , work toward a specific target and even help improve their self esteem.</p>
+      <p><b>Ques2: How our website is different from other gaming platforms?</b></p>
+      <p>Ans: Our website has an add on feature where you as a parent can keep the record of your child’s growth in accordance with the track of scores. This will help you understand how beneficial this method of learning is.</p>
+      <p><b>Ques3: Do this website cost anything?</b></p>
+      <p>Ans: Absolutely no, this is a free service for your child’s growth.</p>
+      <p><b>Ques4: What are the key benefits for child with ADHD?</b></p>
+      <p>Ans:Improve eye-hand coordination, how better self image, improved spatial intelligence and increased creativity.</p>
+      <p><b>Ques5: What are the key benefits of this game for child with dyslexia?</b></p>
+      <p>Ans:Improvements in reading speed , Increased memory retaining capabilty and attention skills.</p>
+      <p><b>Ques6 :What are the key benefits of this game for child with dyscalculia?</b></p>
+      <p>Ans: Allow pupils to learn and practice essential math skills in a fun and safe way. Triggers growth and ability to connect numbers.</p>
+    </div>
+    </section>
+  <!-- Footer -->
+  <section id="footer">
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted"
+style=" background: linear-gradient(#F2ECBE, #EADBC8);
+animation: gradient-animation 18s ease infinite;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <p>
+            Explore our website for games designed to help children with ADHD, dyslexia, and dyscalculia. Our goal is to make learning fun and effective, addressing their unique needs. 
+          <b><p>Share Love<3</p></b>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            useful links
+          </h6>
+          <p>
+            <a href="http://127.0.0.1:3000/sih project/index.html" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#ADHD" class="text-reset">ADHD</a>
+          </p>
+          <p>
+            <a href="#Dyslexia" class="text-reset">Dyslexia</a>
+          </p>
+          <p>
+            <a href="#Dyscalculia" class="text-reset">Dyscalculia</a>
+          </p>
+          <p>
+            <a href="#questions" class="text-reset">FAQ's</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Reach us at
+          </h6>
+          <p>
+            <a href="#" class="text-reset">Facebook</a>
+          </p>
+          <p>
+            <a href="#" class="text-reset">Twitter</a>
+          </p>
+          <p>
+            <a href="#" class="text-reset">Instagram</a>
+          </p>
+          <p>
+            <a href="#" class="text-reset">LinkedIn</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p>
+            <a class="text-reset">Somya Jain</a>
+          </p>
+          <p>
+            <a class="text-reset">Aditi Dutt</a>
+          </p>
+          <p>
+            <a class="text-reset">Anvesha Mishra</a>
+          </p>
+          <p>
+            <a class="text-reset">Aashi Singhal</a>
+          </p>
+          <p>
+            <a class="text-reset">Muskan Gupta</a>
+          </p>
+          <p>
+            <a class="text-reset">Anjali Varshney</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">InclisiveIsland</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    </section>
+  </section>
+</body>
+
+</html>
