@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungle Jump</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body style="background: #A0C49D; 
+background: -webkit-linear-gradient(to right, #C4D7B2, #A0C49D);  
+background: linear-gradient(to right, #A4BC92, #F7FFE5); 
+align-content: center; font-style: oblique;">
+
+    <center>
+    <h1>Jungle Jump</h1>
+    <div id="gameContainer"></div>
+    <div id="scoreContainer" style="text-align: center;">
+        Score: <span id="scoreValue">0</span>
+    </div>
+    <script>
+        let rect_x = 350; // Initial paddle position
+        let rect_change_x = 0;
+        let ball_x = 400; // Initial ball position
+        let ball_y = 50;
+        let ball_change_x = 5;
+        let ball_change_y = 5;
+        let score = 0;
+        let paddleWidth = 100; // Width of the paddle
+        let margin = 10; // Margin for the paddle to move within
+
+        function setup() {
+            let canvas = createCanvas(800, 600);
+            canvas.parent('gameContainer');
+        }
+
+        function draw() {
+            background(0);
+            rect_x += rect_change_x;
+            ball_x += ball_change_x;
+            ball_y += ball_change_y;
+
+            // Ensure the paddle stays within the canvas boundaries
+            rect_x = constrain(rect_x, 0, width - paddleWidth);
+
+            // Collision detection logic for the ball hitting the canvas boundaries
+            if (ball_x < 0 || ball_x > width) {
+                ball_change_x *= -1;
+            }
+            if (ball_y < 0 || ball_y > height) {
+                ball_change_y *= -1;
+                if (ball_y > height) {
+                    // Reset the score when the ball misses the paddle
+                    score = 0;
+                    document.getElementById('scoreValue').textContent = score;
+                }
+            }
+
+            // Collision detection logic for the ball hitting the paddle
+            if (
+                ball_x > rect_x + margin &&
+                ball_x < rect_x + paddleWidth - margin &&
+                ball_y > height - 30
+            ) {
+                ball_change_y *= -1;
+                increaseScore(1); // Increase the score by 1
+            }
+
+            // Draw the red paddle
+            fill(255, 0, 0); // Red color
+            rect(rect_x, height - 30, paddleWidth, 20);
+
+            // Draw the ball
+            fill(255);
+            ellipse(ball_x, ball_y, 15, 15);
+
+            // Display the score
+            fill(255);
+            textSize(24);
+            text("Score: " + score, 10, 30);
+        }
+
+        function keyPressed() {
+            if (keyCode === LEFT_ARROW) {
+                rect_change_x = -6;
+            } else if (keyCode === RIGHT_ARROW) {
+                rect_change_x = 6;
+            }
+        }
+
+        function keyReleased() {
+            if (keyCode === LEFT_ARROW || keyCode === RIGHT_ARROW) {
+                rect_change_x = 0;
+            }
+        }
+
+        function increaseScore(increment) {
+            // Increment the score
+            score += increment;
+            // Update the score displayed on the web page
+            document.getElementById('scoreValue').textContent = score;
+        }
+    </script>
+    </center>
+</body>
+</html>
